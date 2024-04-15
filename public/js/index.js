@@ -60,7 +60,7 @@ async function handleImpression() {
    }, 1000);
 
    data.forEach(data => {
-      str += cardComponent(
+      str += Card(
          data.images.md, data.name, data.connections.groupAffiliation, data.biography.aliases,
          data.biography.alignment, data.biography.firstAppearance, data.biography.fullName,
          data.biography.publisher, data.appearance.race, data.appearance.gender,
@@ -75,10 +75,9 @@ async function handleImpression() {
    return showPowerStats();
 };
 handleImpression();
-
-function cardComponent(img, name, group, aliases, alignment, firstAppearance, 
-   fullName, publisher, race, gender, height, weight, combat, durability, 
-   inteligence, power, speed, strength) {
+ 
+function Card(img, name, group, aliases, alignment, firstAppearance, fullName, 
+   publisher, race, gender, height, weight, combat, durability, inteligence, power, speed, strength) {
 
    return(
       `
@@ -151,5 +150,4 @@ function cardComponent(img, name, group, aliases, alignment, firstAppearance,
       `
    );
 };
-
 
